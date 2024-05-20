@@ -1,0 +1,42 @@
+{
+    "name": "FIDO-demo",
+    "version": "0.1.0",
+    "private": true,
+    "dependencies": {
+        "@testing-library/jest-dom": "^5.16.5",
+        "@testing-library/react": "^13.4.0",
+        "@testing-library/user-event": "^13.5.0",
+        "antd": "^5.1.5",
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0",
+        "react-scripts": "5.0.1",
+        "web-vitals": "^2.1.4"
+    },
+    "scripts": {
+        "windows-start": "set \"BROWSER=none\" && start chrome.exe --user-data-dir=C:/Chrome --disable-web-security https://@$domain8443&&set PORT=8443 &&set HTTPS=true&& set HOST=$domain&& set SSL_CRT_FILE=ssl/server.crt&& set SSL_KEY_FILE=ssl/server.key&& react-scripts start",
+        "build": "react-scripts build",
+        "mac-dev": "HTTPS=true PORT=443 HOST=fidointerop.keyxentic.com SSL_CRT_FILE=ssl/cert.pem SSL_KEY_FILE=ssl/key.pem react-scripts start",
+        "mac-chrome": "open -n '/Applications/Google Chrome.app/' --args --disable-web-security --user-data-dir=/Users/users/MyChromeDevUserData/",
+        "test": "react-scripts test",
+        "cert": "openssl req -x509 -new -nodes -sha256 -utf8 -days 3650 -newkey rsa:2048 -keyout ssl/server.key -out ssl/server.crt -config ssl/ssl.conf && openssl pkcs12 -export -in ssl/server.crt -inkey ssl/server.key -out ssl/server.pfx",
+        "eject": "react-scripts eject"
+    },
+    "eslintConfig": {
+        "extends": [
+            "react-app",
+            "react-app/jest"
+        ]
+    },
+    "browserslist": {
+        "production": [
+            ">0.2%",
+            "not dead",
+            "not op_mini all"
+        ],
+        "development": [
+            "last 1 chrome version",
+            "last 1 firefox version",
+            "last 1 safari version"
+        ]
+    }
+}

@@ -1,0 +1,81 @@
+* {
+    font-family: 'Gill Sans', sans-serif;
+}
+
+.App {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 200px;
+}
+
+.page-title {
+    color: white;
+}
+
+.input-area {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.input-area span {
+    color: white;
+}
+
+.title {
+    display: inline-block;
+    width: 100px;
+}
+
+input {
+    border: 1px solid lightgrey;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    color: black;
+}
+
+button {
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-right: 5px;
+    background-color: rgb(242, 167, 59);
+    box-shadow: 5px 5px 14px 1px rgb(0 0 0 / 20%);
+    border: none;
+}
+
+button:hover {
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 5px 5px 14px 1px rgba(255, 255, 255, 0.2);
+}
+
+.keyList {
+    width: 70%;
+    margin: 0 auto;
+    height: 500px;
+    overflow: scroll;
+}
+
+.keyListTitle {
+    text-align: center;
+    display: block;
+}
+
+th {
+    background-color: rgb(153, 98, 4);
+    color: wheat;
+}
+
+table {
+    table-layout: fixed;
+    word-break: break-all;
+}
+
+td {
+    font-weight: 500;
+    border: 1px solid;
+    text-align: center;
+}
